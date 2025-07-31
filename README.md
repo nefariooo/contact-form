@@ -46,7 +46,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/nefariooo/contact-form)
-- Live Site URL: [Netify](https://your-live-site-url.com)
+- Live Site URL: [Netify](https://magnificent-thrush-04-contact-form.netlify.app/)
 
 ## My process
 
