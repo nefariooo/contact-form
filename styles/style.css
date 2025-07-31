@@ -1,0 +1,222 @@
+   .attribution { font-size: 16px; text-align: center; }
+    .attribution a { color: var(--green-600); }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    /* primary */
+    --green-200 : hsl(148, 38%, 91%);
+    --green-600 : hsl(169, 82%, 27%);
+    --red : hsl(0, 66%, 54%);
+    /* neutral */
+    --grey-500 : hsl(186, 15%, 59%);
+    --grey-900 : hsl(187, 24%, 22%);
+
+    height: 100%;
+}
+body{
+    font-family: 'Karla', sans-serif, Helvetica;
+    font-size: 16px;
+    height: 100%;
+    background-color: var(--green-200);
+}
+sup{
+    font-size: 10px;
+    color: var(--green-600);
+}
+.validation-message{
+    color: var(--red);
+    padding-top: 5px;
+    margin-bottom: 1rem;
+    display: none;
+}
+
+/* single-container */
+
+.main-container{
+    background-color: white;
+    margin: 5vh 3vh;
+    border-radius: 1.25rem;
+    padding: 4vh 5vw;
+}
+.contact-us{
+    font-size: 2rem;
+    margin-bottom: 2vh;
+}
+.personal-info-container,
+.query-container,
+.message-container,
+.consent-container{
+    margin-top: 2rem;
+}
+
+.box-name,
+.query-type,
+.message{
+    color: var(--grey-900);
+    font-size: 1rem;
+    margin: 0.7rem 0;
+}
+
+.input-box,
+.option-box,
+.message-input-box{
+    width: 100%;
+    border-style: none;
+    height: 3.2rem;
+    border: 1px solid var(--grey-500);
+    border-radius: 0.625rem;
+    font-size: 1rem;
+    padding-left: 10px;
+}
+
+.query-form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.8rem;
+}
+.option-box{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+.query-radio-box{
+    margin-left: 1rem;
+    accent-color: var(--green-600);
+    color: var(--green-600);
+}
+.option-box > label,
+.option-box > input{
+    color: var(--grey-900);
+    font-size: 1rem;
+    padding-left: 1rem;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.message-input-box{
+    padding-top: 5px;
+    height: clamp(5rem, calc(35vh - 0.1rem), 10rem);
+    font-family: 'Karla', sans-serif, Helvetica;
+    resize: vertical;
+}
+
+.consent-container{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: clamp(1rem,calc(5vw - 0.1rem), 1.3rem);
+    color: var(--grey-900);
+    align-items: center;
+}
+
+.consent-box{
+    width: 18px;
+    cursor: pointer;
+}
+
+.submit-button-container{
+    margin-top: 2rem;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.submit-button{
+    background-color: var(--green-600);
+    color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.625rem;
+    border-style: none;
+    font-size: clamp(1.2rem,calc(5vw - 0.1rem), 1.6rem);
+    font-weight: 500;
+    cursor: pointer;
+}
+.submitted_button{
+    background-color: var(--green-600);
+    color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.625rem;
+    border-style: none;
+    font-size: clamp(1.2rem,calc(2vw - 0.1rem), 1.2rem);
+    font-weight: 500;
+}
+.submitted_button:hover{
+    opacity: 1;
+}
+.submitted_button:active{
+    opacity: 1;
+}
+
+
+/* hover */
+.input-box:hover,
+.message-input-box{
+    border: 1px solid var(--green-600);
+}
+.option-box:hover{
+    cursor: pointer;
+    background-color: var(--green-200);
+    border: 1px solid var(--green-600);
+}
+.submit-button:hover{
+    opacity: 0.9;
+}
+.submit-button:active{
+    opacity: 0.8;
+}
+.input-box:focus,
+.message-input-box:focus{
+    border: 2px solid var(--green-600) !important;
+    outline: none;
+}
+
+/* desktop design */
+
+@media screen and (min-width: 800px) {
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+    }
+    .main-container{
+        width: 50vw;
+    }
+
+    .contact-us{
+        font-size: 2.5rem;
+    }
+    .personal-info-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2vw;
+
+    }
+    .single-info-box-3{
+        grid-column: span 2;
+    }
+    .message-input-box{
+        height: 10vh;
+    }
+    .query-form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2vw;
+    }
+    .submit-button-container{
+        height: 6vh;
+    }
+    .submit-button{
+        font-size: 1.1rem;
+        font-weight: normal;
+    }
+}

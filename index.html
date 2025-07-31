@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <!-- Font -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Contact form</title>
+
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+  <div class="main-container">
+
+    <h1 class="contact-us">Contact Us</h1>
+    <div class="personal-info-container">
+      <div class="single-info-box">
+        <p class="box-name">First Name <sup>&#9733</sup></p>
+        <input  class="input-box" type="text"  id="js-firstName-box">
+        <p class="validation-message" id="validation-message-firstName">This field is required</p>
+      </div>
+      <div class="single-info-box">
+        <p class="box-name">Last Name <sup>&#9733</sup></p>
+        <input class="input-box" type="text"  id="js-lastName-box">
+        <p class="validation-message" id="validation-message-lastName">This field is required</p>
+      </div>
+      <div class="single-info-box-3">
+        <p class="box-name">Email Address <sup>&#9733</sup></p>
+        <input class="input-box" type="text"  id="js-email-box">
+        <p class="validation-message" id="validation-message-email">Please enter a valid email address</p>
+      </div>
+    </div>
+
+    <div class="query-container">
+      <p class="query-type">Query Type <sup>&#9733</sup></p>
+      <form class="query-form" action="">
+        <div id="js-general-enquiry-container" class="option-box">
+          <input type="radio" class="query-radio-box" name="query-name" id="js-general-enquiry">
+          <label for="js-general-enquiry">General Enquiry</label>
+        </div>
+        <div id="js-support-request-container" class="option-box">
+          <input type="radio" class="query-radio-box" name="query-name"  id="js-support-request">
+          <label for="js-support-request">Support Request</label>
+        </div>
+        <p class="validation-message" id="validation-message-query">Please select a query type</p>
+      </form>
+    </div>
+
+    <div class="message-container">
+      <p class="message">Message <sup>&#9733</sup></p>
+      <textarea id="js-message-box" type="text" class="message-input-box"></textarea>
+      <p class="validation-message" id="validation-message-message">This field is required</p>
+    </div>
+
+    <div class="consent-container">
+      <input type="checkbox" class="consent-box" id="js-consent-box">
+      <label for="js-consent-box">I consent to being contacted
+        by the team <sup>&#9733</sup>
+      </label>
+    </div>
+    <p class="validation-message" id="validation-message-consent">To submit this form, please consent to being contacted</p>
+
+    <div class="submit-button-container">
+      <button id="js-submit-button" class="submit-button">Submit</button>
+    </div>
+
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a><br>. 
+    Coded by <a href="https://github.com/nefariooo">magnificent_thrush</a>.
+  </div> 
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>
